@@ -1,0 +1,60 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
++media-breakpoint-down(xl)
+	#logo
+		left: 570px
++media-breakpoint-down(lg)
+	#logo
+		left: 473px
+
++media-breakpoint-down(md)
+	#logo
+		left: 353px
+	.steps
+		background-image: url(../img/sound-left.png)
+		background-position: left center
+		background-size: contain
+		.step
+			margin-bottom: 40px
+			text-align: center !important
+	.step-icon
+		max-width: 100px
+		margin: 0 auto
+
+
++media-breakpoint-down(sm)
+	#logo
+		left: 263px
+	.phone-number
+		font-size: 1rem
+	.roll-holder
+		display: none
+	header
+		height: auto
+
++media-breakpoint-down(xs)
+	#logo
+		left: 230px
+		transform: translate(-55%, -70%) scale(1.4)
+	.logo-holder
+		width: 100%
+	.contacts-top
+		text-align: center
+		margin-top: 1rem
+	.phone-number
+		font-size: 1.5rem
+	.jumbotron
+		height: 45vh
+	.roll-holder
+		display: none
+
+
+/*==========  Mobile First  ==========*/
+
++media-breakpoint-up(xs)
++media-breakpoint-up(sm)
++media-breakpoint-up(md)
++media-breakpoint-up(lg)
++media-breakpoint-up(xl)

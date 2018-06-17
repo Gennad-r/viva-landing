@@ -1,0 +1,294 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+	font-size: 16px
+
+body
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	background-color: #000
+	color: #fff
+	font-weight: normal
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+a
+	color: $gold
+	&:hover
+		color: $gold
+		text-decoration: none
+.center
+	text-align: center
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+.form-control
+	padding: 7px 15px
+.btn
+	font-size: 1rem
+	display: inline-block
+	//background-color: $gold
+	border: 1px solid $gold
+	background-color: transparent
+	padding: 7px 15px
+	//color: #000
+	color: $gold
+	border-radius: 3px
+	//border-bottom: 3px solid darken($gold, 15%)
+	transition: all 0.2s
+	font-weight: normal
+	&:hover
+		color: #000
+		background-color: darken($gold, 10%)
+
+
+// modal options
+
+.modal-title
+	color: $gold
+
+button.btn:focus
+	outline: none
+	box-shadow: none
+
+header 
+	padding-top: 30px
+	position: relative
+	height: 100vh
+	background-position: center center
+	background-size: cover
+	background-repeat: no-repeat
+	.roll-holder
+		position: absolute
+		bottom: 10px
+		left: 50%
+		transform: translateX(-50%)
+		border: 1px solid $gold
+		border-radius: 15px
+		width: 30px
+		height: 40px
+		text-align: center
+		cursor: pointer
+		.roll
+			display: inline-block
+			position: relative
+			transition: top 0.3s
+			width: 10px
+			height: 10px
+			top: -5px
+			border-right: 1px solid $gold
+			border-bottom: 1px solid $gold
+			transform-origin: 50% 50%
+			transform: rotate(45deg)
+			&:after
+				position: absolute
+				content: ""
+				width: 10px
+				height: 10px
+				border-right: 1px solid $gold
+				border-bottom: 1px solid $gold
+				left: 4px
+				top: 4px
+		&:hover
+			.roll
+				top: 5px
+
+.logo-holder
+	width: 225px
+	
+#logo
+	overflow: visible
+	position: relative
+	z-index: 99
+	top: 50vh
+	transform-origin: 50% 50%
+	transform: translate(-50%, -70%) scale(1.5)
+
+
+.contacts-top
+	color: $gold
+	p
+		text-align: center
+		&:before
+			content: ""
+			display: inline-block
+			vertical-align: middle	
+.call-icon
+	display: inline-block
+	vertical-align: middle
+	width: 35px
+	height: 35px
+	line-height: 35px
+.phone-number
+	display: inline-block
+	vertical-align: middle
+	line-height: 35px
+	margin-left: 10px
+	font-size: 1.5rem
+
+
+.cust-jumbotron
+	height: 60vh
+
+.sale-section, .why-reason, .hits-proposition, .steps
+	position: relative
+	background-repeat: no-repeat
+	padding: 4rem 0
+	h2
+		margin-bottom: 3rem
+		text-align: center
+.sale-section, .hits-proposition, .steps
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 0
+		height: 0
+		border-right: 100vw solid rgba($gold, 0.2)
+		border-top: 20px solid transparent
+		border-bottom: 20px solid transparent
+
+.sale-section
+	&:after
+		border-right: none
+		border-left: 100vw solid rgba($gold, 0.2)
+
+.why-reason
+.why-reason
+	.img-holder
+		max-width: 130px
+		margin: 0 auto
+
+.hits-proposition
+	background-image: url(../img/background-soundbar.jpg)
+	background-position: center center
+	background-size: cover
+	.prop
+		background-color: #fff
+		padding: 15px
+		padding-top: 25px
+		border-radius: 5px
+		color: #000
+	.gold-prop
+		padding: 15px
+		color: #fff
+		background-color: rgba(darken($gold, 25%), 0.7)
+		.btn
+			background-color: #fff
+			&:hover
+				background-color: lighten($gold, 15%)
+	.btn
+		padding: 7px 30px
+		margin-top: 2rem
+	.huge		
+		font-size: 5rem
+		line-height: 4rem
+.sale-section
+	background-image: url(../img/background-mixer.jpg)
+	background-position: center center
+	background-size: cover
+	background-repeat: no-repeat
+.our-request
+	background-image: url(../img/contacts-slider-bg.jpg)
+	background-position: center center
+	background-size: cover
+	background-repeat: no-repeat
+
+.steps
+	background-image: url(../img/sound-left.png)
+	background-position: left center
+	background-size: contain
+	.step
+		margin-bottom: 60px
+		&:nth-child(even)
+			text-align: right
+		&-icon
+			margin: 0.5rem auto 0
+			max-width: 70px
+.faq
+	h3
+		padding-left: 3rem
+		position: relative
+		&:after
+			content: ''
+			width: 2rem
+			height: 100%
+			left: 0
+			top: 0.3rem
+			position: absolute
+			background-size: 2rem
+			background-repeat: no-repeat
+			background-image: url('../img/help-question-mark.svg')
+
+.slide-item
+	img.img-responsive
+		max-height: 600px
+		height: auto
+		max-width: 100%
+		width: auto
+
+	width: auto
+.owl-carousel.mt-3
+	button:focus
+		outline: none
+	.owl-nav
+		display: flex
+		justify-content: space-between
+		width: 100%
+		position: absolute
+		left: 0
+		top: 50%
+		padding: 0 15px
+		transform: translateY(-50%)
+		button
+			background-color: #ba9c54
+			padding: 5px!important
+			border-radius: 5px
+			
+			span
+				color: #000
+				display: inline-block
+				width: 1rem
+				font-size: 1rem
+				padding: 0
+				margin: 0
+	.owl-dots
+		text-align: center
+		.owl-dot
+			width: 15px
+			height: 15px
+			border-radius: 50%
+			border-color: #ba9c54
+			border-width: 1px
+			border-style: solid
+			margin: 0 5px
+			&.active
+				background-color: #ba9c54
+
+#map-holder
+	height: 400px
+
+@import "media" // Always at the end
