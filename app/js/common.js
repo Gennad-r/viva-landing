@@ -76,15 +76,16 @@ $(function() {
 	var anim = anime({
 		targets: '.logo-holder path',
 		strokeDashoffset:[anime.setDashoffset, 0],
+        fill: '#000',
 		duration:1500,
 		easing: 'easeInOutQuint',
 		direction: 'alternate',
-		fill: '#ba9c54',
+		//fill: '#ba9c54',
 		translateX: function() {return anime.random(-25, 25)},
 		translateY: function() {return anime.random(-25, 25)},
 		scale: function() {return anime.random(0.7, 1.5)},
 		rotate: function() { return anime.random(-360, 360); },
-		begin: function () {$('.logo-holder path').attr({'stroke':'#ba9c54','stroke-width':'3'}).css({'transform-origin':'50% 50%'})},
+		begin: function () {$('.logo-holder path').attr({'stroke':'#ba9c54','stroke-width':'3', 'fill':'#000'}).css({'transform-origin':'50% 50%'})},
 		complete: function () { 
 			logoGo();
 			setTimeout(logoPosition, 300);
@@ -98,13 +99,14 @@ $(function() {
     items: 1,
     center: true,
     nav: true,
-    //autoplay: true
+    autoplay: true
 });
 
 	// WOW
-	var wow = new WOW({
 
-	}).init();
+if ($(window).width() > 992){new WOW().init();}
+
+	
 
 });
 
